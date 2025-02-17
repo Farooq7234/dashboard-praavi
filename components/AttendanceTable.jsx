@@ -12,27 +12,27 @@ import {
 const AttendanceTable = () => {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full border-collapse text-sm bg-white rounded-md font-bold ">
+      <table className="w-full border-collapse text-sm bg-white rounded-md font-bold text-center">
         <thead>
           <tr className="border-b border-gray-200  ">
-            <th className="p-3 text-left border-r border-gray-200 ">Date</th>
-            <th className="p-3 text-left border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200 ">Date</th>
+            <th className="p-3 text-center border-r border-gray-200 ">
               Time planned + WH
             </th>
-            <th className="p-3 text-left border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200 ">
               Actual Time
             </th>
-            <th className="p-3 text-left border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200 ">
               Fine/Bonus
             </th>
-            <th className="p-3 text-left border-r border-gray-200 ">Error</th>
-            <th className="p-3 text-left border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200 ">Error</th>
+            <th className="p-3 text-center border-r border-gray-200 ">
               Cal. Att.
             </th>
-            <th className="p-3 text-left border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200 ">
               Final Att.
             </th>
-            <th className="p-3 text-left ">Actions</th>
+            <th className="p-3 text-center ">Actions</th>
           </tr>
         </thead>
         <tbody>
