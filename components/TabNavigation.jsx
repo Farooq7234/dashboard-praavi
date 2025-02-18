@@ -17,7 +17,7 @@ const TabNavigation = () => {
   return (
     <div className="bg-white border-b border-gray-200 w-full">
       <div className="max-w-full">
-        <nav className="flex items-center px-6 overflow-x-auto w-full">
+        <nav className="flex items-center px-6 overflow-x-auto w-full bg-gray-100 ">
           {/* Left side buttons */}
           <div className="flex gap-2  flex-grow">
             {tabs.map((tab) => (
@@ -25,13 +25,13 @@ const TabNavigation = () => {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
-                  py-2 text-xs font-medium rounded-t-lg 
+                 px-4 py-2 text-xs font-bold border  border-r-gray-100 border-l-gray-100
                   transition-colors duration-200 relative
                   min-w-[120px] whitespace-nowrap
                   ${
                     activeTab === tab.id
-                      ? "bg-blue-50 text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-600 hover:bg-gray-100"
+                      ? "bg-white text-blue-600 border  border-r-gray-100 border-l-gray-100"
+                      : "text-[#00000080] opacity-80 hover:bg-gray-100"
                   }
                 `}
               >

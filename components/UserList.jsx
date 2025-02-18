@@ -45,7 +45,7 @@ const users = [
 
 const UserList = () => {
   return (
-    <div className="hidden sm:flex w-[300px] h-[550px] overflow-y-scroll bg-white p-6 rounded-lg shadow-md scroll-auto">
+    <div className="hidden sm:flex w-[300px] h-[550px] overflow-y-scroll bg-white p-2 rounded-lg shadow-md scroll-auto">
       {/* User List Container */}
       <div className="space-y-3">
         {users.map((user, index) => (

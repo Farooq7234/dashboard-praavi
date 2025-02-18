@@ -16,14 +16,14 @@ const EmployeeRecord = ({ employeeData }) => {
               {employeeData.name}
             </h3>
             <p className="text-xs text-gray-600">
-              {employeeData.role} · {employeeData.department}
+              {employeeData.role} | {employeeData.department}
             </p>
           </div>
         </div>
       </div>
       {/* Table 💠 */}
       <div className="overflow-x-auto">
-        <table className="w-full text-xs  ">
+        <table className="w-full text-xs font-bold  ">
           <thead>
             <tr>
               <th className="p-2 text-center border border-gray-200 text-black"></th>
@@ -59,9 +59,7 @@ const EmployeeRecord = ({ employeeData }) => {
           <tbody>
             {/* Calculated Row */}
             <tr>
-              <td className="p-2 font-medium border border-gray-200 text-black">
-                Cal.
-              </td>
+              <td className="p-2  border border-gray-200 text-black">Cal.</td>
               <td className="p-2 text-center border border-gray-200 text-black">
                 17.5
               </td>
@@ -71,7 +69,7 @@ const EmployeeRecord = ({ employeeData }) => {
               <td className="p-2 text-center border border-gray-200 text-black">
                 11
               </td>
-              <td className="p-2 text-center border border-gray-200 text-green-600">
+              <td className="p-2 text-center border border-gray-200 text-black">
                 +2000
               </td>
               <td className="p-2 text-center border border-gray-200 text-black">
@@ -86,15 +84,13 @@ const EmployeeRecord = ({ employeeData }) => {
               <td className="p-2 text-center border border-gray-200 text-black">
                 20
               </td>
-              <td className="p-2 text-left border border-gray-200 text-black text-sm">
+              <td className="p-2 text-left border font-medium border-gray-200 text-black text-sm">
                 Finalized by Rahul
               </td>
             </tr>
             {/* Final Row */}
             <tr>
-              <td className="p-2 font-medium border border-gray-200 text-black">
-                Final
-              </td>
+              <td className="p-2  border border-gray-200 text-black">Final</td>
               <td className="p-2 text-center border border-gray-200 text-black">
                 23.5
               </td>
@@ -104,7 +100,7 @@ const EmployeeRecord = ({ employeeData }) => {
               <td className="p-2 text-center border border-gray-200 text-black">
                 4
               </td>
-              <td className="p-2 text-center border border-gray-200 text-green-600">
+              <td className="p-2 text-center border border-gray-200 text-black">
                 +400
               </td>
               <td className="p-2 text-center border border-gray-200 text-black">
@@ -119,7 +115,7 @@ const EmployeeRecord = ({ employeeData }) => {
               <td className="p-2 text-center border border-gray-200 text-black">
                 27
               </td>
-              <td className="p-2 text-left border border-gray-200 text-black text-sm">
+              <td className="p-2 text-left font-medium border border-gray-200 text-black text-sm">
                 Locked by Shriniwas
               </td>
             </tr>
