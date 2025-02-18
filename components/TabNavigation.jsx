@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 
 const TabNavigation = () => {
-  // Set "final" tab as default active
   const [activeTab, setActiveTab] = useState("final");
 
   const tabs = [
