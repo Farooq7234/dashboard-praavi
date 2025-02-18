@@ -5,7 +5,6 @@ import {
   Clock,
   MapPin,
   User,
-  Edit3,
   MessageCircle,
   ChevronDown,
   Link,
@@ -33,8 +32,8 @@ const AttendanceTable = () => {
     return <p>No attendance records available.</p>;
 
   return (
-    <div className="overflow-x-auto rounded-md w-[300px] ml-4  overflow-hidden sm:w-auto">
-      <table className="w-full border-collapse text-[10px] bg-white  font-bold border border-gray-300 text-center">
+    <div className="overflow-x-auto rounded-md w-full sm:w-auto ml-4">
+      <table className="w-full table-fixed border-collapse text-[10px] bg-white font-bold border border-gray-300 text-center">
         <thead>
           <tr className="border-b border-gray-200">
             <th className="p-3 text-center border-r border-gray-200">Date</th>
@@ -61,12 +60,12 @@ const AttendanceTable = () => {
           {attendanceData.attendanceRecords.map((record, index) => (
             <tr key={index} className="border-b border-gray-200 text-center">
               {/* Date */}
-              <td className="p-3 border-r border-gray-200">
+              <td className="p-3 border-r border-gray-200 break-words">
                 {record.dayOfWeek} {record.date}
               </td>
 
               {/* Planned Time */}
-              <td className="p-3 border-r border-gray-200">
+              <td className="p-3 border-r border-gray-200 break-words">
                 <div>
                   {record.plannedTime?.start} - {record.plannedTime?.end}
                 </div>
@@ -76,7 +75,7 @@ const AttendanceTable = () => {
               </td>
 
               {/* Actual Time */}
-              <td className="p-3 border-r border-gray-200">
+              <td className="p-3 border-r border-gray-200 break-words">
                 <div>
                   {record.actualTime?.start} -{" "}
                   <span
@@ -101,7 +100,7 @@ const AttendanceTable = () => {
               </td>
 
               {/* Fine/Bonus */}
-              <td className="p-3 border-r border-gray-200">
+              <td className="p-3 border-r border-gray-200 break-words">
                 <span className="text-green-500">{record.fine || "-"}</span>
                 <span className="text-gray-400 ml-2">
                   <strike>{record.bonus || "-"}</strike>
@@ -109,7 +108,7 @@ const AttendanceTable = () => {
               </td>
 
               {/* Errors */}
-              <td className="p-3 border-r border-gray-200">
+              <td className="p-3 border-r border-gray-200 break-words">
                 <div className="flex gap-1 justify-center">
                   {record.errors?.includes("time") && (
                     <Clock className="w-4 h-4 text-red-500" />
@@ -124,12 +123,12 @@ const AttendanceTable = () => {
               </td>
 
               {/* Calculated Attendance */}
-              <td className="p-3 border-r border-gray-200 text-green-500">
+              <td className="p-3 border-r border-gray-200 text-green-500 break-words">
                 {record.calculatedAttendance || "-"}
               </td>
 
               {/* Final Attendance */}
-              <td className="p-3 border-r border-gray-200">
+              <td className="p-3 border-r border-gray-200 break-words">
                 <div className="flex items-center justify-center">
                   {record.finalAttendance || "-"}
                   <ChevronDown className="w-4 h-4 ml-1" />
@@ -137,7 +136,7 @@ const AttendanceTable = () => {
               </td>
 
               {/* Actions */}
-              <td className="p-3">
+              <td className="p-3 break-words">
                 <div className="flex items-center gap-2 justify-center">
                   <Link className="w-4 h-4 text-gray-800 cursor-pointer" /> 3
                   <MessageCircle className="w-4 h-4 text-gray-800 cursor-pointer" />{" "}
