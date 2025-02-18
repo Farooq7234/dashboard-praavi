@@ -2,12 +2,12 @@ import React from "react";
 
 const EmployeeRecord = ({ employeeData }) => {
   return (
-    <div className="bg-white w-full flex justify-between items-center  rounded-lg shadow-md p-4  h-fit">
+    <div className="bg-white  flex justify-between items-center flex-wrap  rounded-lg shadow-md p-4  h-fit w-[300px] sm:w-auto">
       <div className="flex items-start gap-4 mb-4">
         {/* Employee Profile Section */}
         <div className="flex items-center gap-3">
           <img
-            src="https://placehold.co/200x200"
+            src="man.jpg"
             alt={employeeData.name}
             className="w-12 h-12 rounded-full"
           />

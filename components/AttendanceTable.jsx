@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import {
   MoreVertical,
   Clock,
@@ -10,229 +11,140 @@ import {
 } from "lucide-react";
 
 const AttendanceTable = () => {
+  const [attendanceData, setAttendanceData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/attendance.json") // Fetch from public folder
+      .then((response) => response.json())
+      .then((data) => {
+        setAttendanceData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error loading JSON:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <p>Loading attendance data...</p>;
+  if (!attendanceData || !attendanceData.attendanceRecords)
+    return <p>No attendance records available.</p>;
+
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full border-collapse text-sm bg-white rounded-md font-bold text-center">
+    <div className="overflow-x-auto rounded-md w-[300px] overflow-hidden sm:w-auto">
+      <table className="w-full border-collapse text-[10px] bg-white  font-bold border border-gray-300 text-center">
         <thead>
-          <tr className="border-b border-gray-200  ">
-            <th className="p-3 text-center border-r border-gray-200 ">Date</th>
-            <th className="p-3 text-center border-r border-gray-200 ">
+          <tr className="border-b border-gray-200">
+            <th className="p-3 text-center border-r border-gray-200">Date</th>
+            <th className="p-3 text-center border-r border-gray-200">
               Time planned + WH
             </th>
-            <th className="p-3 text-center border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200">
               Actual Time
             </th>
-            <th className="p-3 text-center border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200">
               Fine/Bonus
             </th>
-            <th className="p-3 text-center border-r border-gray-200 ">Error</th>
-            <th className="p-3 text-center border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200">Error</th>
+            <th className="p-3 text-center border-r border-gray-200">
               Cal. Att.
             </th>
-            <th className="p-3 text-center border-r border-gray-200 ">
+            <th className="p-3 text-center border-r border-gray-200">
               Final Att.
             </th>
-            <th className="p-3 text-center ">Actions</th>
+            <th className="p-3 text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
-          {/* Row 1 */}
-          <tr className="border-b border-gray-200 text-center">
-            <td className="p-3 border-r border-gray-200">M 31-Jun-2025</td>
-            <td className="p-3 border-r border-gray-200">
-              <div>09:00 AM - 06:30 PM</div>
-              <div className="text-gray-500">≈ 09:00 H</div>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div>09:01 AM - 06:32 PM</div>
-              <div className="text-gray-500">≈ 09:01 H</div>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <span className="text-green-500">+₹500</span>
-              <span className="text-gray-400 ml-2 ">
-                <strike>+₹900</strike>
-              </span>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex gap-1">
-                <Clock className="w-4 h-4 text-red-500" />
-              </div>
-            </td>
-            <td className="p-3 border-r border-gray-200 text-green-500">P</td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex items-center">
-                P
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </div>
-            </td>
-            <td className="p-3">
-              <div className="flex items-center gap-2">
-                <Edit3 className="w-4 h-4 text-gray-400" />
-                <MessageCircle className="w-4 h-4 text-gray-400" />
-                <MoreVertical className="w-4 h-4 text-gray-400" />
-              </div>
-            </td>
-          </tr>
+          {attendanceData.attendanceRecords.map((record, index) => (
+            <tr key={index} className="border-b border-gray-200 text-center">
+              {/* Date */}
+              <td className="p-3 border-r border-gray-200">
+                {record.dayOfWeek} {record.date}
+              </td>
 
-          {/* Row 2 - With Half Day */}
-          <tr className="border-b border-gray-200 text-center">
-            <td className="p-3 border-r border-gray-200">W 29-Jun-2025</td>
-            <td className="p-3 border-r border-gray-200">
-              <div>09:00 AM - 06:30 PM</div>
-              <div className="text-gray-500">≈ 09:00 H</div>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div>
-                09:01 AM - <span className="text-red-500">02:32 PM</span>
-              </div>
-              <div className="text-red-500">≈ 04:01 H</div>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <span className="text-green-500">+₹500</span>
-              <span className="text-gray-400 ml-2 ">
-                <strike>+₹900</strike>
-              </span>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex gap-1">
-                <MapPin className="w-4 h-4 text-red-500" />
-                <Clock className="w-4 h-4 text-red-500" />
-                <User className="w-4 h-4 text-red-500" />
-              </div>
-            </td>
-            <td className="p-3 border-r border-gray-200 text-green-500">HD</td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex items-center">
-                HD
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </div>
-            </td>
-            <td className="p-3">
-              <div className="flex items-center gap-2">
-                <Edit3 className="w-4 h-4 text-gray-400" />
-                <MessageCircle className="w-4 h-4 text-gray-400" />
-                <MoreVertical className="w-4 h-4 text-gray-400" />
-              </div>
-            </td>
-          </tr>
+              {/* Planned Time */}
+              <td className="p-3 border-r border-gray-200">
+                <div>
+                  {record.plannedTime?.start} - {record.plannedTime?.end}
+                </div>
+                <div className="text-gray-500">
+                  ≈ {record.plannedTime?.duration}
+                </div>
+              </td>
 
-          {/* Row 3 - With OT */}
-          <tr className="border-b border-gray-200 text-center">
-            <td className="p-3 border-r border-gray-200">T 28-Jun-2025</td>
-            <td className="p-3 border-r border-gray-200">
-              <div>09:00 AM - 06:30 PM</div>
-              <div className="text-gray-500">≈ 09:00 H</div>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div>
-                09:01 AM - <span className="text-orange-500">09:32 PM</span>
-              </div>
-              <div className="text-orange-500">≈ 12:01 H</div>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <span className="text-green-500">+₹500</span>
-              <span className="text-gray-400 ml-2 ">
-                <strike>+₹900</strike>
-              </span>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex gap-1">
-                <Clock className="w-4 h-4 text-orange-500" />
-                <User className="w-4 h-4 text-orange-500" />
-              </div>
-            </td>
-            <td className="p-3 border-r border-gray-200 text-green-500">
-              P + OT
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex items-center justify-between">
-                <span>P + OT</span>
-                <span className="text-orange-500">09:01 H</span>
-              </div>
-            </td>
-            <td className="p-3">
-              <div className="flex items-center gap-2">
-                <Edit3 className="w-4 h-4 text-gray-400" />
-                <MessageCircle className="w-4 h-4 text-gray-400" />
-                <MoreVertical className="w-4 h-4 text-gray-400" />
-              </div>
-            </td>
-          </tr>
+              {/* Actual Time */}
+              <td className="p-3 border-r border-gray-200">
+                <div>
+                  {record.actualTime?.start} -{" "}
+                  <span
+                    className={`${
+                      record.actualTime?.duration < "09:00 H"
+                        ? "text-red-500"
+                        : "text-orange-500"
+                    }`}
+                  >
+                    {record.actualTime?.end}
+                  </span>
+                </div>
+                <div
+                  className={`${
+                    record.actualTime?.duration < "09:00 H"
+                      ? "text-red-500"
+                      : "text-orange-500"
+                  }`}
+                >
+                  ≈ {record.actualTime?.duration}
+                </div>
+              </td>
 
-          {/* Row 4 - With LT */}
-          <tr className="border-b border-gray-200 text-center">
-            <td className="p-3 border-r border-gray-200">F 27-Jun-2025</td>
-            <td className="p-3 border-r border-gray-200">- @ -</td>
-            <td className="p-3 border-r border-gray-200">
-              <div>
-                09:01 AM - <span className="text-red-500">05:32 PM</span>
-              </div>
-              <div className="text-red-500">≈ 08:01 H</div>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <span className="text-green-500">+₹500</span>
-              <span className="text-gray-400 ml-2 ">
-                <strike>+₹900</strike>
-              </span>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <MapPin className="w-4 h-4 text-red-500" />
-            </td>
-            <td className="p-3 border-r border-gray-200 text-green-500">
-              P - LT
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex items-center justify-between">
-                <span>P - LT</span>
-                <span className="text-red-500">09:01 H</span>
-              </div>
-            </td>
-            <td className="p-3">
-              <div className="flex items-center gap-2">
-                <Edit3 className="w-4 h-4 text-gray-400" />
-                <MessageCircle className="w-4 h-4 text-gray-400" />
-                <MoreVertical className="w-4 h-4 text-gray-400" />
-              </div>
-            </td>
-          </tr>
+              {/* Fine/Bonus */}
+              <td className="p-3 border-r border-gray-200">
+                <span className="text-green-500">{record.fine || "-"}</span>
+                <span className="text-gray-400 ml-2">
+                  <strike>{record.bonus || "-"}</strike>
+                </span>
+              </td>
 
-          {/* Row 5 - With WO */}
-          <tr className="border-b border-gray-200 text-center">
-            <td className="p-3 border-r border-gray-200">S 26-Jun-2025</td>
-            <td className="p-3 border-r border-gray-200">- @ -</td>
-            <td className="p-3 border-r border-gray-200">
-              <div>09:01 AM - 06:32 PM</div>
-              <div className="text-gray-500">≈ 09:01 H</div>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <span className="text-green-500">+₹500</span>
-              <span className="text-gray-400 ml-2 ">
-                <strike>+₹900</strike>
-              </span>
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex gap-1">
-                <MapPin className="w-4 h-4 text-red-500" />
-                <User className="w-4 h-4 text-red-500" />
-              </div>
-            </td>
-            <td className="p-3 border-r border-gray-200 text-green-500">
-              P + WO
-            </td>
-            <td className="p-3 border-r border-gray-200">
-              <div className="flex items-center">
-                P + WO
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </div>
-            </td>
-            <td className="p-3">
-              <div className="flex items-center gap-2">
-                <Edit3 className="w-4 h-4 text-gray-400" />
-                <MessageCircle className="w-4 h-4 text-gray-400" />
-                <MoreVertical className="w-4 h-4 text-gray-400" />
-              </div>
-            </td>
-          </tr>
+              {/* Errors */}
+              <td className="p-3 border-r border-gray-200">
+                <div className="flex gap-1 justify-center">
+                  {record.errors?.includes("time") && (
+                    <Clock className="w-4 h-4 text-red-500" />
+                  )}
+                  {record.errors?.includes("location") && (
+                    <MapPin className="w-4 h-4 text-red-500" />
+                  )}
+                  {record.errors?.includes("user") && (
+                    <User className="w-4 h-4 text-red-500" />
+                  )}
+                </div>
+              </td>
+
+              {/* Calculated Attendance */}
+              <td className="p-3 border-r border-gray-200 text-green-500">
+                {record.calculatedAttendance || "-"}
+              </td>
+
+              {/* Final Attendance */}
+              <td className="p-3 border-r border-gray-200">
+                <div className="flex items-center justify-center">
+                  {record.finalAttendance || "-"}
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </div>
+              </td>
+
+              {/* Actions */}
+              <td className="p-3">
+                <div className="flex items-center gap-2 justify-center">
+                  <Edit3 className="w-4 h-4 text-gray-400 cursor-pointer" />
+                  <MessageCircle className="w-4 h-4 text-gray-400 cursor-pointer" />
+                  <MoreVertical className="w-4 h-4 text-gray-400 cursor-pointer" />
+                </div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

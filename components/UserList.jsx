@@ -45,25 +45,25 @@ const users = [
 
 const UserList = () => {
   return (
-    <div className=" w-[400px] h-[550px] overflow-y-scroll bg-white p-6 rounded-lg shadow-md scroll-auto">
+    <div className="hidden sm:flex w-[300px] h-[550px] overflow-y-scroll bg-white p-6 rounded-lg shadow-md scroll-auto">
       {/* User List Container */}
       <div className="space-y-3">
         {users.map((user, index) => (
           <div
             key={index}
-            className="flex items-center bg-[#F7F7FE]  rounded-lg shadow-sm hover:bg-[#E2E2FF] transition p-4"
+            className="flex items-center bg-[#F7F7FE]  rounded-lg shadow-sm hover:bg-[#E2E2FF] transition p-4 w-[100%]"
           >
             {/* User Image */}
             <img
-              src={user.image}
+              src="man.jpg"
               alt={user.name}
               className="w-10 h-10 rounded-full border"
             />
 
             {/* User Info */}
             <div className="ml-3">
-              <p className="text-sm font-semibold text-gray-900">{user.name}</p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs font-semibold text-gray-900">{user.name}</p>
+              <p className="text-[10px] text-gray-500">
                 {user.role} | {user.department}
               </p>
             </div>

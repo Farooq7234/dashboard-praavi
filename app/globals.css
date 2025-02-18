@@ -4,6 +4,20 @@
 @tailwind utilities;
 
 
+::-webkit-scrollbar {
+  width: 5px; /* Thinner scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7cdd4; /* Thumb color */
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f2f3; /* Track color */
+}
+
+
 body{
   font-family: "Poppins", serif;
 }

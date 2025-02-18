@@ -13,11 +13,11 @@ export default function Home() {
   };
   return (
     <>
-      <main className="bg-gray-100 flex gap-6 w-full">
+      <main className="bg-gray-100 flex gap-3 lg:gap-6 w-full">
         <Sidebar />
-        <div className="w-full mx-4">
+        <div className="w-full sm:mx-4">
           <SearchHeader />
-          <div className="flex gap-4 ">
+          <div className="flex gap-4">
             <UserList />
             <div className="flex flex-col justify-start  gap-4 w-full">
               <EmployeeRecord employeeData={employeeData} />

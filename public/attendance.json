@@ -1,0 +1,593 @@
+{
+  "attendanceRecords": [
+    {
+      "date": "2025-06-31",
+      "dayOfWeek": "M",
+      "plannedTime": {
+        "start": "09:00 AM",
+        "end": "06:30 PM",
+        "duration": "09:00 H"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "06:32 PM",
+        "duration": "09:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P",
+      "finalAttendance": "P"
+    },
+    {
+      "date": "2025-06-30",
+      "dayOfWeek": "M",
+      "plannedTime": {
+        "start": "09:00 AM",
+        "end": "06:30 PM",
+        "duration": "09:00 H"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "06:32 PM",
+        "duration": "09:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time"],
+      "calculatedAttendance": "P",
+      "finalAttendance": "P"
+    },
+    {
+      "date": "2025-06-29",
+      "dayOfWeek": "W",
+      "plannedTime": {
+        "start": "09:00 AM",
+        "end": "06:30 PM",
+        "duration": "09:00 H"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "02:32 PM",
+        "duration": "04:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time"],
+      "calculatedAttendance": "P",
+      "finalAttendance": "HD"
+    },
+    {
+      "date": "2025-06-28",
+      "dayOfWeek": "T",
+      "plannedTime": {
+        "start": "09:00 AM",
+        "end": "06:30 PM",
+        "duration": "09:00 H"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "09:32 PM",
+        "duration": "12:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["time", "user"],
+      "calculatedAttendance": "P + OT",
+      "finalAttendance": "P + OT"
+    },
+    {
+      "date": "2025-06-27",
+      "dayOfWeek": "F",
+      "plannedTime": {
+        "start": "09:00 AM",
+        "end": "06:30 PM",
+        "duration": "09:00 H"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location"],
+      "calculatedAttendance": "P - LT",
+      "finalAttendance": "P - LT"
+    },
+    {
+      "date": "2025-06-26",
+      "dayOfWeek": "S",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "06:32 PM",
+        "duration": "09:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "user"],
+      "calculatedAttendance": "P + WO",
+      "finalAttendance": "P + WO"
+    },
+    {
+      "date": "2025-06-25",
+      "dayOfWeek": "S",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "09:32 PM",
+        "duration": "12:01 H"
+      },
+      "fine": "-₹500",
+      "bonus": "+₹900",
+      "errors": ["user"],
+      "calculatedAttendance": "P + WO + OT",
+      "finalAttendance": "P + WO + OT"
+    },
+    {
+      "date": "2025-06-24",
+      "dayOfWeek": "M",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-23",
+      "dayOfWeek": "T",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-22",
+      "dayOfWeek": "W",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-21",
+      "dayOfWeek": "T",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-20",
+      "dayOfWeek": "F",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-19",
+      "dayOfWeek": "S",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-18",
+      "dayOfWeek": "S",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-17",
+      "dayOfWeek": "M",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-16",
+      "dayOfWeek": "T",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-15",
+      "dayOfWeek": "W",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-14",
+      "dayOfWeek": "T",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-13",
+      "dayOfWeek": "F",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-12",
+      "dayOfWeek": "S",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-11",
+      "dayOfWeek": "S",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-10",
+      "dayOfWeek": "M",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-09",
+      "dayOfWeek": "T",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-08",
+      "dayOfWeek": "W",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-07",
+      "dayOfWeek": "T",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-06",
+      "dayOfWeek": "F",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-05",
+      "dayOfWeek": "S",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-04",
+      "dayOfWeek": "S",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-03",
+      "dayOfWeek": "M",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-02",
+      "dayOfWeek": "T",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    },
+    {
+      "date": "2025-06-01",
+      "dayOfWeek": "W",
+      "plannedTime": {
+        "start": "-",
+        "end": "-",
+        "duration": "-"
+      },
+      "actualTime": {
+        "start": "09:00 AM",
+        "end": "05:32 PM",
+        "duration": "08:01 H"
+      },
+      "fine": "+₹500",
+      "bonus": "+₹900",
+      "errors": ["location", "time", "user"],
+      "calculatedAttendance": "P + WO - LT",
+      "finalAttendance": "P + WO - LT"
+    }
+  ]
+}

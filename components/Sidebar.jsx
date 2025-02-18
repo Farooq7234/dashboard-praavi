@@ -2,14 +2,14 @@ import { Calendar, CirclePower, UserRound, WalletMinimal } from "lucide-react";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen w-16 bg-[#323FDD] flex flex-col items-center py-4 space-y-8">
+    <div className="min-h-screen w-16 bg-[#323FDD] flex flex-col items-center p-2 space-y-8">
       {/* Logo / Initial Letter */}
       <div className="text-white text-xl ">P</div>
 
       {/* Profile Picture */}
       <div className="w-10 h-10 rounded-full overflow-hidden ">
         <img
-          src="https://placehold.co/20x20" // Replace with actual profile image URL
+          src="admin.jpg" // Replace with actual profile image URL
           alt="Profile"
           className="w-full h-full object-cover"
         />
