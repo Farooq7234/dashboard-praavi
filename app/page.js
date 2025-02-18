@@ -14,7 +14,7 @@ export default function Home() {
   };
   return (
     <>
-      <main className="bg-gray-100 gap-3 lg:gap-6 w-full overflow-x-hidden">
+      <main className="bg-gray-100 gap-3 lg:gap-6 w-full ">
         <div className="flex">
           <Sidebar />
           <div className="flex-1">
