@@ -32,8 +32,8 @@ const AttendanceTable = () => {
     return <p>No attendance records available.</p>;
 
   return (
-    <div className="overflow-x-auto rounded-md w-full sm:w-auto ml-4">
-      <table className="w-full table-fixed border-collapse text-[10px] bg-white font-bold border border-gray-300 text-center">
+    <div className="w-full overflow-x-auto  rounded-md ml-4 ">
+      <table className="w-full  text-[10px] bg-white font-bold border border-gray-300 text-center">
         <thead>
           <tr className="border-b border-gray-200">
             <th className="p-3 text-center border-r border-gray-200">Date</th>
