@@ -2,9 +2,9 @@ import React from "react";
 
 const EmployeeRecord = ({ employeeData }) => {
   return (
-    <div className="bg-white  flex justify-between items-center flex-wrap  rounded-lg shadow-md p-4  h-fit w-[300px] sm:w-auto">
+    <div className="bg-white  flex justify-between items-center flex-wrap  rounded-lg shadow-md p-4 ml-4  h-fit w-[300px] sm:w-auto">
       <div className="flex items-start gap-4 mb-4">
-        {/* Employee Profile Section */}
+        {/* Employee Profile 💠 */}
         <div className="flex items-center gap-3">
           <img
             src="man.jpg"
@@ -21,8 +21,7 @@ const EmployeeRecord = ({ employeeData }) => {
           </div>
         </div>
       </div>
-
-      {/* Attendance Table */}
+      {/* Table 💠 */}
       <div className="overflow-x-auto">
         <table className="w-full text-xs  ">
           <thead>

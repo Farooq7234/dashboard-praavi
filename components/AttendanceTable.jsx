@@ -8,6 +8,7 @@ import {
   Edit3,
   MessageCircle,
   ChevronDown,
+  Link,
 } from "lucide-react";
 
 const AttendanceTable = () => {
@@ -32,7 +33,7 @@ const AttendanceTable = () => {
     return <p>No attendance records available.</p>;
 
   return (
-    <div className="overflow-x-auto rounded-md w-[300px] overflow-hidden sm:w-auto">
+    <div className="overflow-x-auto rounded-md w-[300px] ml-4  overflow-hidden sm:w-auto">
       <table className="w-full border-collapse text-[10px] bg-white  font-bold border border-gray-300 text-center">
         <thead>
           <tr className="border-b border-gray-200">
@@ -138,9 +139,10 @@ const AttendanceTable = () => {
               {/* Actions */}
               <td className="p-3">
                 <div className="flex items-center gap-2 justify-center">
-                  <Edit3 className="w-4 h-4 text-gray-400 cursor-pointer" />
-                  <MessageCircle className="w-4 h-4 text-gray-400 cursor-pointer" />
-                  <MoreVertical className="w-4 h-4 text-gray-400 cursor-pointer" />
+                  <Link className="w-4 h-4 text-gray-800 cursor-pointer" /> 3
+                  <MessageCircle className="w-4 h-4 text-gray-800 cursor-pointer" />{" "}
+                  3
+                  <MoreVertical className="w-4 h-4 text-gray-800 cursor-pointer" />
                 </div>
               </td>
             </tr>

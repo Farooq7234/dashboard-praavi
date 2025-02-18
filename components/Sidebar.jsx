@@ -1,4 +1,4 @@
-import { Calendar, CirclePower, UserRound, WalletMinimal } from "lucide-react";
+import { Calendar, CirclePower, Users, WalletMinimal } from "lucide-react";
 
 const Sidebar = () => {
   return (
@@ -18,7 +18,7 @@ const Sidebar = () => {
       {/* Navigation Icons */}
       <div className="flex flex-col space-y-6 text-white">
         <Calendar size={20} className="cursor-pointer hover:text-gray-200" />
-        <UserRound size={20} className="cursor-pointer hover:text-gray-200" />
+        <Users size={20} className="cursor-pointer hover:text-gray-200" />
         <WalletMinimal
           size={20}
           className="cursor-pointer hover:text-gray-200"
