@@ -19,13 +19,13 @@ const TabNavigation = () => {
       <div className="max-w-full">
         <nav className="flex items-center px-6 overflow-x-auto w-full">
           {/* Left side buttons */}
-          <div className="flex gap-4 flex-grow">
+          <div className="flex gap-2  flex-grow">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
-                  py-2 text-[10px] font-medium rounded-t-lg 
+                  py-2 text-xs font-medium rounded-t-lg 
                   transition-colors duration-200 relative
                   min-w-[120px] whitespace-nowrap
                   ${

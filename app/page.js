@@ -18,7 +18,7 @@ export default function Home() {
         <div className="flex">
           <Sidebar />
           <div className="flex-1">
-            <div className="w-full sm:mx-4">
+            <div className="w-full">
               <TabNavigation />
               <SearchHeader />
             </div>
